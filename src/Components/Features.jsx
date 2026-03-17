@@ -31,26 +31,6 @@ function Features() {
     }
   }, [])
 
-
-  // const products = [
-  //   { img: onedram2dramhalfdrampp, label: "1/2Dram and 1Dram and 2Dram PP" },
-  //   { img: onedram2dramhdpe, label: "1Dram and 2Dram HDPE" },
-  //   { img: onedram2dramivory, label: "1Dram and 2Dram HDPE Ivory" },
-  //   { img: thirtyml15mlpp, label: "15ML and 30ML PP" },
-  //   { img: thirtyml15mlhdpe, label: "15ML and 30ML HDPE" },
-  //   { img: tengram20gram40gram, label: "10Grams and 20Grams and 40Grams" },
-  //   { img: hundredgrams, label: "100Grams" },
-  //   { img: twohundredgrams, label: "200Grams" },
-  //   { img: tenlitrecapinner, label: "10 Litre Cap and Inner" },
-  //   { img: fifty20float5010float, label: "50*10 Flaot and 50*20 Float" },
-  //   { img: twohundredeightfloat, label: "208 Float" },
-  //   { img: twohundredeightggfloat, label: "208 GG Float" },
-  //   { img: twentylitrecapinner, label: "20 litre Cap and Inner" },
-  //   { img: smalldumbbox, label: "Small Dumb Box" },
-  //   { img: bigdumbbox, label: "Big Dumb Box" }
-  // ];
-
-
   return (
     <>
       <div className="container mt-5">
