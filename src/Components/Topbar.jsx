@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Devicemark from "../assets/Images/Devicemark.jpeg";
 import "../assets/CssFolder/homePageStyle.css";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
@@ -25,7 +24,7 @@ function Topbar() {
         <div className="container-fluid">
           {/* Logo */}
           <Link className="navbar-brand" to="/">
-            <img src={Devicemark} alt="GG Plastic Logo" height="50" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/DevicemarkOther.jpeg" alt="GG Plastic Logo" height="50" />
           </Link>
 
           {/* Hamburger */}

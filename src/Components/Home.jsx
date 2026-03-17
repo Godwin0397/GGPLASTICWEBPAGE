@@ -1,8 +1,4 @@
 import React, { useEffect } from 'react'
-import machine1 from "../assets/Images/100GramBlowMoulding.png";
-import machine2 from "../assets/Images/20GramBlowMoulding.png";
-import machine3 from "../assets/Images/5GramBlowMoulding.png";
-import machine4 from "../assets/Images/InjectionMoulding.png";
 import "../assets/CssFolder/homePageStyle.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -28,15 +24,15 @@ function Home() {
         <div className="carousel-inner">
 
           <div className="carousel-item active">
-            <img src={machine1} className="d-block w-100 carousel-img" alt="machine1" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/100GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine1" />
           </div>
 
           <div className="carousel-item">
-            <img src={machine2} className="d-block w-100 carousel-img" alt="machine2" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/20GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine2" />
           </div>
 
           <div className="carousel-item">
-            <img src={machine3} className="d-block w-100 carousel-img" alt="machine3" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/5GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine3" />
           </div>
 
         </div>
@@ -94,7 +90,7 @@ function Home() {
           </div>
 
           <div className="col-md-6">
-            <img src={machine4} className="img-fluid rounded" alt="About us" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/InjectionMouldingMachine.png" className="img-fluid rounded" alt="About us" />
           </div>
 
         </div>
