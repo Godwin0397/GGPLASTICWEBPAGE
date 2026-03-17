@@ -1,0 +1,113 @@
+/* Navbar background */
+.custom-navbar {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  padding: 10px 20px;
+}
+
+/* Brand */
+.custom-navbar .navbar-brand img {
+  filter: brightness(1.1);
+}
+
+/* Nav links */
+.custom-navbar .nav-link {
+  color: #eaeaea !important;
+  margin-left: 18px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Hover */
+.custom-navbar .nav-link:hover {
+  color: #00c6ff !important;
+}
+
+/* Active */
+.custom-navbar .nav-link.active {
+  color: #00c6ff !important;
+  border-bottom: 2px solid #00c6ff;
+}
+
+/* Hamburger button */
+.custom-toggler {
+  border: 1px solid #ffffff55;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Remove focus shadow */
+.navbar-toggler.custom-toggler:focus,
+.navbar-toggler.custom-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Offcanvas background only for mobile */
+@media (max-width: 992px) {
+  .offcanvas,
+  .offcanvas-header,
+  .offcanvas-body {
+    background-color: #0f2027 !important;
+    color: white;
+  }
+
+  .offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Offcanvas links */
+.offcanvas .nav-link {
+  color: #fff !important;
+  padding: 12px 0;
+  font-size: 18px;
+}
+
+.offcanvas .nav-link:hover {
+  color: #00c6ff !important;
+}
+
+/* Close icon white */
+.custom-close {
+  filter: invert(1) !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+.custom-close:focus,
+.custom-close:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.carousel-img{
+  height: 50vh;      /* Half page height */
+  object-fit: cover; /* Prevent image stretching */
+}
+
+.pricing-section{
+  height: calc(100vh - 70px); /* adjust if navbar height differs */
+  overflow: hidden;
+  background: linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("/images/factory-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.square-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.square-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
