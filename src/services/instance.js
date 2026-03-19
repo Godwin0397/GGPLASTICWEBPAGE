@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseurl = "http://localhost:3001/api"
+const baseurl = import.meta.env.VITE_localhost_backend_sever_3001_baseurl
 
 
 // create an axios instance
