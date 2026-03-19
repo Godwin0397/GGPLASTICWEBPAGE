@@ -20,7 +20,7 @@ function Topbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg custom-navbar">
+      <nav className="navbar navbar-expand-lg custom-navbar" style={{ position: "sticky", top: 0, zIndex: 1000 }}>
         <div className="container-fluid">
           {/* Logo */}
           <Link className="navbar-brand" to="/">

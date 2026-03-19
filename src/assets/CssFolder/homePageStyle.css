@@ -82,14 +82,33 @@
   box-shadow: none !important;
 }
 
+/* Home page Css Start */
 .carousel-img{
   height: 50vh;      /* Half page height */
   object-fit: cover; /* Prevent image stretching */
 }
 
-.pricing-section{
-  height: calc(100vh - 70px); /* adjust if navbar height differs */
+/* Home page Css End */
+
+
+/* Pricing page Css Start */
+
+html, body {
+  scrollbar-width: none;
+}
+
+/* Pricing Page Final CSS */
+
+/* Pricing Page Final Universal CSS */
+
+.pricing-section {
+  height: calc(100dvh - 70px);
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: linear-gradient(
       rgba(0,0,0,0.6),
       rgba(0,0,0,0.6)
@@ -99,6 +118,78 @@
   background-position: center;
 }
 
+/* Fix Bootstrap spacing */
+.pricing-section .container {
+  height: 100%;
+  padding: 0;
+}
+
+.pricing-section .row {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.pricing-section .card {
+  width: 100%;
+  max-width: 800px;
+  max-height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   SMALL HEIGHT DEVICES FIX
+   (THIS IS THE KEY 🔥)
+========================= */
+@media (max-height: 700px) {
+
+  .pricing-section {
+    overflow-y: auto; /* allow scroll when height is small */
+  }
+
+  .pricing-section .row {
+    align-items: flex-start; /* prevent cutoff */
+    padding: 10px 0;
+  }
+
+  .pricing-section .card {
+    max-height: none;
+  }
+
+  .pricing-section .card-body {
+    overflow-y: auto;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+  }
+
+  .pricing-section .card-body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* .pricing-section{
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  background: linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("/images/factory-bg.jpg");
+  background-size: cover;
+  background-position: center;
+} */
+
+/* Pricing page Css End */
+
+
+/* Products page Css Start */
 .square-image {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -111,3 +202,5 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* Products page Css End */
