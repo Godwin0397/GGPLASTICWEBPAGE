@@ -3,19 +3,25 @@ import productServices from '../services/productServices';
 
 function Features() {
 
-  const [products, setproducts] = useState([])
+  const [products, setproducts] = useState<any>([])
+
+  interface Product {
+    type: string;
+    productName: string;
+    productURL: string;
+  }
 
   const allProducts = async () => {
     try {
-      let { data } = await productServices.allProducts()
+      const { data }: { data: { allProducts: Product[] } } = await productServices.allProducts()
       console.log(data.allProducts)
-      const filteredProducts = data.allProducts.filter(item=> item.type === "Product").map(item=>({
-          label: item.productName,
-          img: item.productURL
+      const filteredProducts = data.allProducts.filter(item => item.type === "Product").map(item => ({
+        label: item.productName,
+        img: item.productURL
       }))
       setproducts(filteredProducts)
 
-    } catch (error) {
+    } catch (error: any) {
       console.log("view all products error", error.message);
       alert(error.message);
     }
@@ -25,8 +31,8 @@ function Features() {
     allProducts()
   }, [])
 
-  useEffect(()=> {
-    return ()=>{
+  useEffect(() => {
+    return () => {
       setproducts([])
     }
   }, [])
@@ -37,7 +43,7 @@ function Features() {
         <h2 className="text-center mb-4">Our Products</h2>
 
         <div className="row">
-          {products.map((product, index) => (
+          {products.map((product: { label: string, img: string }, index: number) => (
             <div className="col-lg-4 col-md-6 col-12 mb-4" key={index}>
 
               <div className="border rounded shadow-sm p-2 bg-white">
@@ -52,6 +58,7 @@ function Features() {
                     src={product.img}
                     alt={product.label}
                     className="img-fluid"
+                    loading="lazy"
                   />
 
                 </div>

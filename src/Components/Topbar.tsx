@@ -1,20 +1,21 @@
 import React, { useRef, useState } from "react";
 import "../assets/CssFolder/homePageStyle.css";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import * as bootstrap from "bootstrap";
 
 function Topbar() {
 
   const location = useLocation()
-  const [active, setActive] = useState(location.pathname)
+  const [active, setActive] = useState<string>(location.pathname)
 
-  const homeRef = useRef()
-  const featureRef = useRef()
-  const pricingRef = useRef()
+  const homeRef = useRef<any>(null)
+  const featureRef = useRef<any>(null)
+  const pricingRef = useRef<any>(null)
 
-  const activeTab = (pathName)=>{
+  const activeTab = (pathName:string)=>{
     setActive(pathName)
     const offcanvasEl = document.getElementById("offcanvasNavbar")
-    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl)
+    const bsOffcanvas = offcanvasEl ? bootstrap.Offcanvas.getInstance(offcanvasEl) : null
     if (bsOffcanvas) bsOffcanvas.hide()
   }
 
@@ -41,7 +42,7 @@ function Topbar() {
           {/* Offcanvas */}
           <div
             className="offcanvas offcanvas-end"
-            tabIndex="-1"
+            tabIndex={-1}
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
