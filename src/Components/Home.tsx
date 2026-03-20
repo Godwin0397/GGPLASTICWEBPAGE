@@ -9,7 +9,7 @@ import Carousel from "bootstrap/js/dist/carousel";
 function Home() {
 
   useEffect(() => {
-    const element = document.querySelector("#carouselExample");
+    const element = document.querySelector("#carouselExample") as HTMLElement;
     new Carousel(element, {
       interval: 4000,
       ride: "carousel",
@@ -24,15 +24,15 @@ function Home() {
         <div className="carousel-inner">
 
           <div className="carousel-item active">
-            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/100GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine1" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/100GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine1" loading="lazy"/>
           </div>
 
           <div className="carousel-item">
-            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/20GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine2" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/20GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine2" loading="lazy"/>
           </div>
 
           <div className="carousel-item">
-            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/5GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine3" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/5GramBlowMouldingMachine.png" className="d-block w-100 carousel-img" alt="machine3" loading="lazy"/>
           </div>
 
         </div>
@@ -90,7 +90,7 @@ function Home() {
           </div>
 
           <div className="col-md-6">
-            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/InjectionMouldingMachine.png" className="img-fluid rounded" alt="About us" />
+            <img src="https://ggplastics3bucket01.s3.ap-south-2.amazonaws.com/InjectionMouldingMachine.png" className="img-fluid rounded" alt="About us" loading="lazy"/>
           </div>
 
         </div>
