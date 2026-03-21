@@ -5,17 +5,11 @@ function Features() {
 
   const [products, setproducts] = useState<any>([])
 
-  interface Product {
-    type: string;
-    productName: string;
-    productURL: string;
-  }
-
   const allProducts = async () => {
     try {
-      const { data }: { data: { allProducts: Product[] } } = await productServices.allProducts()
+      const { data } = await productServices.allProducts()
       console.log(data.allProducts)
-      const filteredProducts = data.allProducts.filter(item => item.type === "Product").map(item => ({
+      const filteredProducts = data.allProducts.map(item => ({
         label: item.productName,
         img: item.productURL
       }))
