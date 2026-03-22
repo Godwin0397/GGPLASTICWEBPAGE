@@ -37,9 +37,6 @@ deploy_react:
     - ssh-keyscan -H 16.112.63.158 >> ~/.ssh/known_hosts
 
   script:
-    # ✅ Remove old files (important)
-    - ssh ubuntu@16.112.63.158 "rm -rf /home/ubuntu/ggplasticwebpage/ggplasticwebpage/*"
-
     # ✅ Copy new build
     - scp -r build/* ubuntu@16.112.63.158:/home/ubuntu/ggplasticwebpage/ggplasticwebpage
 
