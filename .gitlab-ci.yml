@@ -38,13 +38,13 @@ deploy_react:
 
   script:
     # ✅ Remove old files (important)
-    - ssh root@16.112.63.158 "rm -rf /home/ubuntu/ggplasticwebpage/ggplasticwebpage/*"
+    - ssh ubuntu@16.112.63.158 "rm -rf /home/ubuntu/ggplasticwebpage/ggplasticwebpage/*"
 
     # ✅ Copy new build
-    - scp -r build/* root@16.112.63.158:/home/ubuntu/ggplasticwebpage/ggplasticwebpage
+    - scp -r build/* ubuntu@16.112.63.158:/home/ubuntu/ggplasticwebpage/ggplasticwebpage
 
     # ✅ (Optional) restart nginx
-    - ssh root@16.112.63.158 "sudo systemctl restart nginx"
+    - ssh ubuntu@16.112.63.158 "sudo systemctl restart nginx"
 
   environment:
     name: production
