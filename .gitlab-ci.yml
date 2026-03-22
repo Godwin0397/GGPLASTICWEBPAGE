@@ -36,5 +36,8 @@ deploy_react:
     # ✅ Avoid host verification issue
     - ssh-keyscan -H 16.112.63.158 >> ~/.ssh/known_hosts
 
+  script:
+    - ssh ubuntu@16.112.63.158 "echo build success"
+
   environment:
     name: production
