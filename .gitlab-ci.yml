@@ -32,6 +32,9 @@ deploy_react:
     # Use file variable correctly
     - cp "$SSH_PRIVATE_KEY" ~/.ssh/id_rsa
 
+    # ✅ FIX: correct permission
+    - chmod 600 ~/.ssh/id_rsa
+
     # ✅ Avoid host verification issue
     - ssh-keyscan -H 16.112.63.158 >> ~/.ssh/known_hosts
 
