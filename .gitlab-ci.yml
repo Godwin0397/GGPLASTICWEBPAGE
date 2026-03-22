@@ -39,14 +39,9 @@ deploy_react:
     - ssh-keyscan -H 16.112.63.158 >> ~/.ssh/known_hosts
 
   script:
-    # ✅ Remove old files (important)
-    - ssh ubuntu@16.112.63.158 "rm -rf /home/ubuntu/ggplasticwebpage/ggplasticwebpage/*"
+    - ssh ubuntu@16.112.63.158 "echo build success"
 
-    # ✅ Copy new build
-    - scp -r build/* ubuntu@16.112.63.158:/home/ubuntu/ggplasticwebpage/ggplasticwebpage
-
-    # ✅ (Optional) restart nginx
-    - ssh ubuntu@16.112.63.158 "sudo systemctl restart nginx"
+    - ssh -vvv ubuntu@16.112.63.158 "echo test"
 
   environment:
     name: production
