@@ -36,12 +36,5 @@ deploy_react:
     # ✅ Avoid host verification issue
     - ssh-keyscan -H 16.112.63.158 >> ~/.ssh/known_hosts
 
-  script:
-    # ✅ Copy new build
-    - scp -r build/* ubuntu@16.112.63.158:/home/ubuntu/ggplasticwebpage/ggplasticwebpage
-
-    # ✅ (Optional) restart nginx
-    - ssh ubuntu@16.112.63.158 "sudo systemctl restart nginx"
-
   environment:
     name: production
