@@ -30,7 +30,7 @@ deploy_react:
     - mkdir -p ~/.ssh
 
     # ✅ Add SSH key
-    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
 
     # ✅ Avoid host verification issue
