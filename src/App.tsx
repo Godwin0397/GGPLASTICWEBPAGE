@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Topbar from "./Components/Topbar.jsx";
 import Loader from "./Components/Loader.jsx";
 
-const Topbar = React.lazy(() => import("./Components/Topbar.jsx"));
-const Home = React.lazy(() => import("./Components/Home.jsx"));
-const Features = React.lazy(() => import("./Components/Features.jsx"));
-const Pricing = React.lazy(() => import("./Components/Pricing.jsx"));
+const Topbar = React.lazy(() => import("./Components/Topbar"));
+const Home = React.lazy(() => import("./Components/Home"));
+const Features = React.lazy(() => import("./Components/Features"));
+const Pricing = React.lazy(() => import("./Components/Pricing"));
 
 function App() {
   return (
