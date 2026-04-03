@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseurl = import.meta.env.VITE_uat_baseurl
+const baseurl = import.meta.env.VITE_prod_baseurl
 
 
 // create an axios instance
